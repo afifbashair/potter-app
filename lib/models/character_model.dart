@@ -6,6 +6,7 @@ class CharacterModel {
   final String interpretedBy;
   final String image;
   final String birthdate;
+  final List children;
 
   CharacterModel({
     required this.fullName,
@@ -14,6 +15,7 @@ class CharacterModel {
     required this.interpretedBy,
     required this.image,
     required this.birthdate,
+    required this.children,
   });
 
   factory CharacterModel.fromJson(
@@ -38,6 +40,9 @@ class CharacterModel {
 
       birthdate:
           json['birthdate']?.toString() ?? '',
+
+      children:
+          json['children'] ?? [],
     );
   }
 }

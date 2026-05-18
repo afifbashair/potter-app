@@ -84,6 +84,13 @@ class CharacterDetailView extends StatelessWidget {
               'Birthdate',
               character.birthdate,
             ),
+
+            buildItem(
+              'Children',
+              character.children.isEmpty
+                  ? '-'
+                  : character.children.join(', '),
+            ),
           ],
         ),
       ),
